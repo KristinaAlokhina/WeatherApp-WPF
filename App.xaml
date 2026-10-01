@@ -1,0 +1,8 @@
+<Application x:Class="WeatherApp.App"
+             xmlns="http://microsoft.com"
+             xmlns:x="http://microsoft.com"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
