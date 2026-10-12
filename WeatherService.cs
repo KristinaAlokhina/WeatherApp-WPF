@@ -26,7 +26,7 @@ namespace WeatherApp
         public async Task<WeatherData?> GetWeatherAsync(string city)
         {
             // units=metric stellt Celsius ein, lang=de liefert deutsche Beschreibungen
-            string url = $"https://openweathermap.org{city}&appid={_apiKey}&units=metric&lang=de";
+            string url = $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={_apiKey}&units=metric&lang=de";
 
             try
             {
