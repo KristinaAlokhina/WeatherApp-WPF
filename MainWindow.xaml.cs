@@ -28,22 +28,22 @@ namespace WeatherApp
             WeatherService weatherService = new WeatherService(myApiKey);
             WeatherData data = await weatherService.GetWeatherAsync(cityName);
 
-           
             if (data != null)
             {
-                
+               
                 string description = data.Weather.Count > 0 ? data.Weather[0].Description : "Keine Beschreibung";
 
+               
+                CityNameText.Text = data.CityName;
                 
-                string infoMessage = $"Wetter in {data.CityName}:\n\n" +
-                                     $"🌡 Temperatur: {data.Main.Temperature}°C\n" +
-                                     $"🥶 Gefühlt wie: {data.Main.FeelsLike}°C\n" +
-                                     $"💧 Luftfeuchtigkeit: {data.Main.Humidity}%\n" +
-                                     $"💨 Wind: {data.Wind.Speed} m/s\n" +
-                                     $"☁️ Zustand: {description}";
-
                 
-                MessageBox.Show(infoMessage, "Wetterinformationen");
+                TemperatureText.Text = $"{Math.Round(data.Main.Temperature)}°C";
+                
+                
+                DescriptionText.Text = char.ToUpper(description[0]) + description.Substring(1);
+                
+                HumidityText.Text = $"{data.Main.Humidity}%";
+                WindText.Text = $"{data.Wind.Speed} m/s";
             }
             else
             {
