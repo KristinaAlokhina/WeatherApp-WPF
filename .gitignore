@@ -1,0 +1,7 @@
+Secrets.cs
+
+bin/
+obj/
+
+.vs/
+*.user
