@@ -11,7 +11,7 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<!-- Блок поиска города -->
+		<!-- Block für die Stadtsuche -->
 		<StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
 			<TextBox x:Name="CityInput" Width="220" Height="35"
                      VerticalContentAlignment="Center" Padding="10,0"
@@ -22,13 +22,13 @@
                     FontSize="14" FontWeight="Bold" Click="SearchButton_Click"/>
 		</StackPanel>
 
-		<!-- Блок вывода погоды на экран -->
+		<!-- Block zur Anzeige des Wetters auf dem Bildschirm -->
 		<StackPanel Grid.Row="1" x:Name="WeatherDisplayBlock" VerticalAlignment="Center" HorizontalAlignment="Center">
 			<TextBlock x:Name="CityNameText" Text="Stadt" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#007ACC"/>
 			<TextBlock x:Name="TemperatureText" Text="--°C" FontSize="64" FontWeight="Light" HorizontalAlignment="Center" Margin="0,10"/>
 			<TextBlock x:Name="DescriptionText" Text="Wetterzustand" FontSize="18" HorizontalAlignment="Center" Foreground="#AAAAAA"/>
 
-			<!-- Дополнительные параметры (Влажность и Ветер) -->
+			<!-- Zusätzliche Parameter (Luftfeuchtigkeit und Wind) -->
 			<UniformGrid Columns="2" Margin="0,30,0,0" Width="300">
 				<StackPanel Margin="10">
 					<TextBlock Text="Feuchtigkeit" Foreground="#888888" HorizontalAlignment="Center"/>
